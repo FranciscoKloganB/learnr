@@ -81,7 +81,7 @@ const toastOptions = {
   rtl: false
 }
 const info = (message) => toast.info(message, toastOptions);
-const error = (message) => toast.info(message, toastOptions);
+const error = (message) => toast.error(message, toastOptions);
 
 export default {
   components: {},
