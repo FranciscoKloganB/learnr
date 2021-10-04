@@ -68,6 +68,20 @@ import { defaultToastEventBus } from '../../main.js';
 const urlValidator = require('valid-url');
 const slugify = require('slugify');
 const toast = useToast(defaultToastEventBus);
+const toastOptions = {
+  closeOnClick: true,
+  pauseOnFocusLoss: true,
+  pauseOnHover: true,
+  draggable: true,
+  draggablePercent: 0.6,
+  showCloseButtonOnHover: false,
+  hideProgressBar: true,
+  closeButton: 'button',
+  icon: true,
+  rtl: false
+}
+const info = (message) => toast.info(message, toastOptions);
+const error = (message) => toast.info(message, toastOptions);
 
 export default {
   components: {},
@@ -94,13 +108,14 @@ export default {
     },
     createResource() {
       if (this.errorsExist()) {
-        this.notifyError();
+        error('Can not create a new resource until all form fields errors are corrected.')
       } else {
         this.onCreateResourceItem({
           ...this.form,
           slug: `${slugify(this.form.title.toLowerCase())}-${Date.now()}`
         });
         this.clearForm();
+        info("Successfully added new resource to 'Show resources' tab.");
       }
     },
     errorsExist() {
@@ -119,23 +134,6 @@ export default {
         link: ''
       };
     },
-    notifyError() {
-      toast.error(
-        'Can not create a new resource until all form fields are correct.',
-        {
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: true,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: true,
-          closeButton: 'button',
-          icon: true,
-          rtl: false
-        }
-      );
-    }
   }
 };
 </script>
