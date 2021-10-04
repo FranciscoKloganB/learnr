@@ -9,7 +9,11 @@
       </div>
     </div>
     <footer class="card-footer">
-      <slot name="footer"></slot>
+      <div class="columns">
+        <div class="column">
+          <slot name="footer"></slot>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
