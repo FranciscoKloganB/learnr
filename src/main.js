@@ -21,7 +21,7 @@ app.use(Toast, {
   position: POSITION.BOTTOM_RIGHT,
   maxToasts: 3,
   newestOnTop: true,
-  timeout: 3000,
+  timeout: 5000,
   transition: 'Vue-Toastification__bounce',
   filterBeforeCreate: (toast, toasts) => {
     if (toasts.filter(t => t.type === toast.type).length !== 0) {

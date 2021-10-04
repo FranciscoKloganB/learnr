@@ -80,8 +80,10 @@ const toastOptions = {
   icon: true,
   rtl: false
 }
-const info = (message) => toast.info(message, toastOptions);
+
 const error = (message) => toast.error(message, toastOptions);
+const info = (message) => toast.info(message, toastOptions);
+const success = (message) => toast.success(message, toastOptions);
 
 export default {
   components: {},
@@ -115,7 +117,7 @@ export default {
           slug: `${slugify(this.form.title.toLowerCase())}-${Date.now()}`
         });
         this.clearForm();
-        info("Successfully added new resource to 'Show resources' tab.");
+        success("Successfully added new resource to 'Show resources' tab.");
       }
     },
     errorsExist() {
