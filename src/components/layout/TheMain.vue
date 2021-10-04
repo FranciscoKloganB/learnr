@@ -1,6 +1,6 @@
 <template>
   <main class="site-content">
-    <div class="columns is-justify-content-center">
+    <div class="columns is-justify-content-center is-multiline">
       <slot></slot>
     </div>
   </main>
