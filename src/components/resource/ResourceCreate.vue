@@ -108,7 +108,7 @@ export default {
     },
     createResource() {
       if (this.errorsExist()) {
-        error('Can not create a new resource until all form fields errors are corrected.')
+        error('Can not create a resource until all form errors are corrected.')
       } else {
         this.onCreateResourceItem({
           ...this.form,
