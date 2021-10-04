@@ -1,5 +1,4 @@
-# Learnr
-## Storing resources
+# Learnr - Storing resources
 
 Small demonstration sticky note app (frontend) using Vue.js
 
