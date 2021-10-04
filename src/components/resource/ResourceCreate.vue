@@ -2,10 +2,12 @@
   <div class="column is-half">
     <form>
       <div class="field">
-        <label class="label">Title</label>
+        <label class="label" for="title">Title</label>
         <div class="control">
           <input
             v-model="form.title"
+            id="title"
+            name="title"
             class="input"
             type="text"
             placeholder="Provide a short description or name for your resource."
@@ -17,10 +19,12 @@
       </div>
 
       <div class="field">
-        <label class="label">Link</label>
+        <label class="label" for="link">Link</label>
         <div class="control">
           <input
             v-model="form.link"
+            id="link"
+            name="link"
             class="input"
             type="url"
             placeholder="Where in the web can we find more information about the resource."
@@ -32,10 +36,12 @@
       </div>
 
       <div class="field">
-        <label class="label">Description</label>
+        <label class="label" for="description">Description</label>
         <div class="control">
           <textarea
             v-model="form.description"
+            id="description"
+            name="description"
             class="textarea"
             placeholder="Provide a lengthy description for the resource. E.g., what is the resource about?"
           ></textarea>
@@ -47,7 +53,7 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-primary" v-on:click.prevent="createResource">
+          <button class="button is-primary" type="submit" v-on:click.prevent="createResource">
             Submit
           </button>
         </div>
