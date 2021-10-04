@@ -129,6 +129,9 @@ export default {
   flex-direction: column;
 }
 
+body {
+  font-family: 'Source Code Pro', monospace;
+}
 a {
   color: $primary;
 }
