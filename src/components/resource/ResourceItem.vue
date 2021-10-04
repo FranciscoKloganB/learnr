@@ -9,7 +9,7 @@
         <app-anchor v-bind:anchorLink="link">View resource</app-anchor>
       </template>
       <template v-slot:footer>
-        <button v-on:click="deleteResource">Remove</button>
+        <button class="button is-danger is-light" v-on:click="deleteResource">Remove</button>
       </template>
     </app-card>
   </div>

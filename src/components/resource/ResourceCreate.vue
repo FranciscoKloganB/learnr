@@ -47,13 +47,13 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link" v-on:click.prevent="createResource">
+          <button class="button is-primary" v-on:click.prevent="createResource">
             Submit
           </button>
         </div>
         <div class="control">
           <button
-            class="button is-link is-light"
+            class="button is-warning is-light"
             v-on:click.prevent="clearForm"
           >
             Cancel
