@@ -109,9 +109,10 @@ export default {
       this.resources.push(item);
     },
     deleteResourceItem(slug) {
-      this.resources = this.resources.filter(
-        resource => resource.slug !== slug
+      const index = this.resources.findIndex(
+        resource => resource.slug === slug
       );
+      this.resources.splice(index, 1)
     },
     switchTab(componentName) {
       this.activeTab = componentName;
